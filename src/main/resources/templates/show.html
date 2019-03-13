@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>SpringBoot 303</title>
+</head>
+<body>
+<a href="/">Show All Courses</a><br/>
+    <h3>Title :</h3><span th:text="${course.title}"></span>
+    <h3>Instructor :</h3><span th:text="${course.instructor}"></span>
+    <h3>Description :</h3><p th:text="${course.description}"></p>
+    <h3>Credits :</h3><span th:text="${course.credit}"></span><br/>
+    <a th:href="@{/delete/{id}(id=${course.id})}">Delete this course</a>
+</body>
+</html>
